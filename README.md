@@ -6,7 +6,7 @@ To understand the vulnerabilities on the mobile platform as growing number of us
 | ------------ |:-------------:|:-----:|:-----:|
 | **Genymotion** | https://dl.genymotion.com/releases/genymotion-2.8.0/genymotion-2.8.0-vbox.exe | https://dl.genymotion.com/releases/genymotion-2.8.0/genymotion-2.8.0-linux_x64.bin | https://dl.genymotion.com/releases/genymotion-2.8.0/genymotion-2.8.0.dmg |
 | **VirtualBox** | https://www.virtualbox.org/wiki/Downloads
-| Java JDK      | http://www.oracle.com/technetwork/java/javase/ |downloads/jdk8-downloads-2133151.html |
+| Java JDK      | http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html |
 | Drozer          | https://labs.mwrinfosecurity.com/tools/drozer |
 | APK Studio  | http://www.vaibhavpandey.com/apkstudio/ |
 | JADX | https://github.com/skylot/jadx/releases/download/v0.6.0/jadx-0.6.0.zip |
