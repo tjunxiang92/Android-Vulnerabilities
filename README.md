@@ -1,11 +1,17 @@
-# Android-Vulnerabilities 
+# Android Vulnerabilities 
+To understand the vulnerabilities on the mobile platform as growing number of users are using a personal smartphones and such devices have complex operations that we might not understand the vulnerability behind it. Today's lesson will be based on using Top 10 Mobile Vulnerabilities provided by OWASP as a guideline.
+
+## Resources  
 |                      | Windows           | Linux  | Mac |
 | ------------ |:-------------:|:-----:|:-----:|
-| Genymotion | https://dl.genymotion.com/releases/genymotion-2.8.0/genymotion-2.8.0-vbox.exe | $1600 |
-| Java JDK      | centered      |   $12 |
-| Drozer          | are neat      |    $1 |
+| **Genymotion** | https://dl.genymotion.com/releases/genymotion-2.8.0/genymotion-2.8.0-vbox.exe | https://dl.genymotion.com/releases/genymotion-2.8.0/genymotion-2.8.0-linux_x64.bin | https://dl.genymotion.com/releases/genymotion-2.8.0/genymotion-2.8.0.dmg |
+| **VirtualBox** | https://www.virtualbox.org/wiki/Downloads
+| Java JDK      | http://www.oracle.com/technetwork/java/javase/ |downloads/jdk8-downloads-2133151.html |
+| Drozer          | https://labs.mwrinfosecurity.com/tools/drozer |
+| APK Studio  | http://www.vaibhavpandey.com/apkstudio/ |
+| JADX | https://github.com/skylot/jadx/releases/download/v0.6.0/jadx-0.6.0.zip |
 
-## Resources
+
 ### Learning
 - https://www.owasp.org/index.php/Projects/OWASP_Mobile_Security_Project_-2015_Scratchpad
 - http://resources.infosecinstitute.com/cracking-damn-insecure-and-vulnerable-apps-diva-part-1/
@@ -49,8 +55,7 @@
 - https://blog.netspi.com/attacking-android-applications-with-debuggers/
 
 
-# Lesson Objective
-To understand the vulnerabilities on the mobile platform as growing number of users are using a personal smartphones and such devices have complex operations that we might not understand the vulnerability behind it. Today's lesson will be based on using Top 10 Mobile Vulnerabilities provided by OWASP as a guideline.
+
 
 # Top 10 Vulnerabilities
 - M1 - Improper Platform Usage
@@ -134,8 +139,6 @@ E/diva-log( 1695): Error while processing transaction with credit card: 00000000
 ```
 3. Open up JD-GUI to see the code causing this vulnerability
 
-## Challenge 2 -
-
 # Android Storage Options
 https://developer.android.com/guide/topics/data/data-storage.html
 - Shared Preferences
@@ -144,13 +147,7 @@ https://developer.android.com/guide/topics/data/data-storage.html
 - External Storage
 - Network Connection
 
-# Places to Try
-- Try BB Learn App. See where your credentials are stored
-
-# Drozer Install
-- https://labs.mwrinfosecurity.com/tools/drozer/
-
-# Drozer Installation for Mac
+# Drozer - Installation for Mac
 Credits to: https://blog.ropnop.com/installing-drozer-on-os-x-el-capitan/
 
 ## Work on Virtual Env
