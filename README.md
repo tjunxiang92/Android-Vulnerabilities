@@ -10,7 +10,7 @@ To understand the vulnerabilities on the mobile platform as growing number of us
 | Drozer          | https://labs.mwrinfosecurity.com/tools/drozer |
 | APK Studio  | http://www.vaibhavpandey.com/apkstudio/ |
 | JADX | https://github.com/skylot/jadx/releases/download/v0.6.0/jadx-0.6.0.zip |
-
+| APK Tool | https://bitbucket.org/iBotPeaches/apktool/downloads/apktool_2.2.0.jar |
 
 ### Learning
 - https://www.owasp.org/index.php/Projects/OWASP_Mobile_Security_Project_-2015_Scratchpad
