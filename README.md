@@ -1,18 +1,38 @@
-# Android-Vulnerabilities
+# Android-Vulnerabilities 
+|                      | Windows           | Linux  | Mac |
+| ------------ |:-------------:|:-----:|:-----:|
+| Genymotion | https://dl.genymotion.com/releases/genymotion-2.8.0/genymotion-2.8.0-vbox.exe | $1600 |
+| Java JDK      | centered      |   $12 |
+| Drozer          | are neat      |    $1 |
 
 ## Resources
 ### Learning
 - https://www.owasp.org/index.php/Projects/OWASP_Mobile_Security_Project_-2015_Scratchpad
 - http://resources.infosecinstitute.com/cracking-damn-insecure-and-vulnerable-apps-diva-part-1/
+- http://w1a2d3s4q5e6.blogspot.sg/2016/08/diva-android-13input-validation-issues.html
 - http://resources.infosecinstitute.com/android-hacking-and-security-part-18-introduction-to-reverse-engineering/
 - http://resources.infosecinstitute.com/android-application-hacking-insecure-bank-part-1/
 - https://androidtamer.com/learn_android_security
 - https://www.owasp.org/index.php/OWASP_Mobile_Security_Project
 
 ### Vulnerable Tools
-- https://github.com/payatu/diva-android
-- https://github.com/dineshshetty/Android-InsecureBankv2
+1. https://github.com/payatu/diva-android
+2. https://github.com/jackMannino/OWASP-GoatDroid-Project
+3. https://github.com/dineshshetty/Android-InsecureBankv2
+4. https://github.com/intrepidusgroup/ig-learner
 
+### Decompilers
+- APK Studio - https://bintray.com/vaibhavpandeyvpz/generic/apkstudio/view
+- https://github.com/skylot/jadx/releases
+- https://sourceforge.net/projects/dex2jar/
+
+
+### Obfuscators
+- Comparisons - http://proguard.sourceforge.net/index.html#alternatives.html
+- ProGuard - http://proguard.sourceforge.net/
+- yGuard - http://www.yworks.com/products/yguard
+- DexGuard - https://www.guardsquare.com/dexguard
+	- String Encryption
 
 ### Attacking Tools
 - Dex2Jar - https://sourceforge.net/projects/dex2jar/files/dex2jar-2.0.zip/download
@@ -34,14 +54,29 @@ To understand the vulnerabilities on the mobile platform as growing number of us
 
 # Top 10 Vulnerabilities
 - M1 - Improper Platform Usage
-- M2 - Insecure Data Storage (1)
+- M2 - Insecure Data Storage
 - M3 - Insecure Communication
 - M4 - Insufficient Cryptography
 - M5 - Insecure Authentication
 - M6 - Client Code Quality
 - M7 - Code Tampering
-- M8 - Reverse Engineering (1)
+- M8 - Reverse Engineering
 - M9 - Extraneous Functionality
+
+## M1  - Improper Platform Usage
+-  misuse of a platform feature
+- failure to use platform security controls
+- Examples
+	- Android intents
+	- Platform permissions 
+	- Misuse of TouchID, the Keychain
+	- some other security control that is part of the mobile operating system
+
+## M3 - Insecure Communication
+This covers poor handshaking, incorrect SSL versions, weak negotiation, cleartext communication of sensitive assets, etc.
+
+M1, M3, M5, M7, M10 - Slides
+M2, M4, M6, M8 - Workshop
 
 # Tips
 1. Logcat
@@ -111,4 +146,59 @@ https://developer.android.com/guide/topics/data/data-storage.html
 
 # Places to Try
 - Try BB Learn App. See where your credentials are stored
-- 
+
+# Drozer Install
+- https://labs.mwrinfosecurity.com/tools/drozer/
+
+# Drozer Installation for Mac
+Credits to: https://blog.ropnop.com/installing-drozer-on-os-x-el-capitan/
+
+## Work on Virtual Env
+```bash
+sudo pip install virtualenvwrapper
+mkvirtualenv drozer
+workon drozer
+```
+
+## Set up Drozer folder
+```bash
+mkdir drozer-install
+cd drozer-install
+```
+
+## Reinstall OpenSSL & PyOpenSSL
+```bash
+brew uninstall openssl
+brew install openssl
+wget https://pypi.python.org/packages/source/p/pyOpenSSL/pyOpenSSL-0.13.tar.gz
+tar xzvf pyOpenSSL-0.13.tar.gz
+cd pyOpenSSL-0.13
+sed -i '' 's/X509_REVOKED_dup/X509_REVOKED_dupe/' OpenSSL/crypto/crl.c
+python setup.py build_ext -L/usr/local/opt/openssl/lib -I/usr/local/opt/openssl/include
+python setup.py build
+python setup.py install
+```
+
+## Some dependencies
+```bash
+easy_install --allow-hosts pypi.python.org protobuf==2.4.1
+easy_install twisted==10.2.0
+```
+
+## Install drozer egg
+```bash
+cd ..
+wget https://github.com/mwrlabs/drozer/releases/download/2.3.4/drozer-2.3.4.tar.gz
+tar xvfz drozer-2.3.4.tar.gz 
+easy_install ./drozer-2.3.4-py2.7.egg
+nano /usr/local/bin/drozer
+```
+
+## Write file to drozer
+```python
+#!/Users/rflather/.virtualenvs/drozer/bin/python
+# EASY-INSTALL-SCRIPT: 'drozer==2.3.4','drozer'
+__requires__ = 'drozer==2.3.4'  
+__import__('pkg_resources').run_script('drozer==2.3.4', 'drozer')  
+```
+
