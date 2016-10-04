@@ -2,6 +2,12 @@
 To understand the vulnerabilities on the mobile platform as growing number of users are using a personal smartphones and such devices have complex operations that we might not understand the vulnerability behind it. Today's lesson will be based on using Top 10 Mobile Vulnerabilities provided by OWASP as a guideline.
 
 ## Resources  
+## All In One Package
+- https://drive.google.com/open?id=0B_96EHY-E-1GX2JMbEVUaG5VWjg
+	- Android Emulator
+	- VM with Tools Installed
+
+## Files in the VM
 |                      | Windows           | Linux  | Mac |
 | ------------ |:-------------:|:-----:|:-----:|
 | **Genymotion** | https://dl.genymotion.com/releases/genymotion-2.8.0/genymotion-2.8.0-vbox.exe | https://dl.genymotion.com/releases/genymotion-2.8.0/genymotion-2.8.0-linux_x64.bin | https://dl.genymotion.com/releases/genymotion-2.8.0/genymotion-2.8.0.dmg |
